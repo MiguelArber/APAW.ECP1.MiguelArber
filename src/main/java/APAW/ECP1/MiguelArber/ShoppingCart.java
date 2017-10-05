@@ -2,8 +2,6 @@ package APAW.ECP1.MiguelArber;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.HashMap;
-import java.util.Map;
 
 public class ShoppingCart {
 	
@@ -18,7 +16,7 @@ public class ShoppingCart {
 		this.id = id;
 		this.name = name;
 		this.urgent = urgent;
-		this.date = date.getInstance();
+		this.date = Calendar.getInstance();
 		this.articles = new ArrayList<Article>();
 		
 	}

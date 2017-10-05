@@ -10,12 +10,15 @@ import APAW.ECP1.MiguelArber.Article;
 public class TestArticle {
 	
 	private Article article;
+	private Article article2;
+
 	
 	@Before
 	public void before() {
 		
 		article = new Article(1, "ref#123"); //Constructor 1
-		
+		article2 = new Article(1, "ref#123", 0, true); //Constructor 1
+
 	}
 	
 	@Test
@@ -40,4 +43,15 @@ public class TestArticle {
 		assertEquals(10, article.getStock());
 		
 	}
+
+	
+	@Test
+	public void testDiscontinued() {
+		
+		assertEquals(false, article.isDiscontinued());
+		article.setDisontinued(true);
+		assertEquals(true, article.isDiscontinued());
+		
+	}
+
 }

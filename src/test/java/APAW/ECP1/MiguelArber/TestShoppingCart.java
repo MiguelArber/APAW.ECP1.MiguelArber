@@ -2,6 +2,7 @@ package APAW.ECP1.MiguelArber;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
 import org.junit.Before;
@@ -12,11 +13,13 @@ import APAW.ECP1.MiguelArber.ShoppingCart;
 public class TestShoppingCart {
 	
 	private ShoppingCart cart;
+	private ShoppingCart cart2;
 	
 	@Before
 	public void before() {
 		
 		cart = new ShoppingCart(1, "Carrito", false); //Constructor 1
+		cart2 = new ShoppingCart(1, Calendar.getInstance(), "Carrito2", false, new ArrayList<Article>()); //Constructor 2
 		
 	}
 	
