@@ -11,11 +11,11 @@ public class ShoppingCart {
 	private boolean urgent;
 	private ArrayList<Article> articles;
 	
-	public ShoppingCart(int id, String name, boolean urgent) {
+	public ShoppingCart(int id) {
 		
 		this.id = id;
-		this.name = name;
-		this.urgent = urgent;
+		this.name = "";
+		this.urgent = false;
 		this.date = Calendar.getInstance();
 		this.articles = new ArrayList<Article>();
 		
@@ -47,6 +47,11 @@ public class ShoppingCart {
 		
 		this.name = name;
 		
+	}
+	
+	public void setUrgent(boolean urgent) {
+		
+		this.urgent = urgent;
 	}
 	
 	public boolean isUrgent() {

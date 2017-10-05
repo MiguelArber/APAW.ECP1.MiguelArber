@@ -18,8 +18,8 @@ public class TestShoppingCart {
 	@Before
 	public void before() {
 		
-		cart = new ShoppingCart(1, "Carrito", false); //Constructor 1
-		cart2 = new ShoppingCart(1, Calendar.getInstance(), "Carrito2", false, new ArrayList<Article>()); //Constructor 2
+		cart = new ShoppingCart(1); //Constructor 1
+		cart2 = new ShoppingCart(1, Calendar.getInstance(), "Carrito", false, new ArrayList<Article>()); //Constructor 2
 		
 	}
 	
@@ -33,7 +33,8 @@ public class TestShoppingCart {
 	@Test
 	public void testName() {
 		
-		assertEquals("Carrito", cart.getName());
+		assertEquals("", cart.getName());
+		assertEquals("Carrito", cart2.getName());
 		cart.setName("Cart");
 		assertEquals("Cart", cart.getName());
 		
@@ -43,6 +44,8 @@ public class TestShoppingCart {
 	public void testUrgent() {
 		
 		assertEquals(false, cart.isUrgent());
+		cart.setUrgent(true);
+		assertEquals(true, cart.isUrgent());
 		
 	}
 
