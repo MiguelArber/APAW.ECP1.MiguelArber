@@ -13,7 +13,7 @@ Para ilustrar el uso de este patrón se ha decidido tomar como ejemplo un progra
 
 La ventaja de usar este patrón es clara, no sólo resultaría muy sencillo añadir una forma de resolver una ecuación cuadrática (o incluso modificar una existente), sino que sería muy fácil también extender la funcionalidad de la calculadora permitiendo que ésta resuelva también otro tipo de ecuaciones (por ejemplo lineares) añadiendo una nueva estrategia. Todo ello sin necesidad de modificar el código existente. Un patrón sencillo que dota de mucha flexibilidad al código.
 
-### Diagrama de clases
+#### Diagrama de clases
 
 En el siguiente diagrama se refleja el uso del patrón strategy para la aplicación previamente descrita:
 ![Class diagram for Strategy Pattern](https://github.com/MiguelArber/APAW.ECP1.MiguelArber/blob/develop/docs/Strategy.png)
