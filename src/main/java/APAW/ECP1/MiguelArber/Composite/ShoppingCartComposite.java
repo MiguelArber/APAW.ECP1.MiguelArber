@@ -31,11 +31,6 @@ public class ShoppingCartComposite extends ShoppingCartComponent {
 		cartComponentList.remove(cartComponent);
 		
 	}
-	
-	public String getName() {
-		
-		return name;
-	}
 
 	@Override
 	public String view() {

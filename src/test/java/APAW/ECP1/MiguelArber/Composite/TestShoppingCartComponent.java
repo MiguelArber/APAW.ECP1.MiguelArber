@@ -55,9 +55,33 @@ public class TestShoppingCartComponent {
 	}
 	
 	@Test
-	public void viewGroupTest() {
+	public void viewCompositeTest() {
 		
 		assertEquals("Group1", shoppingCartRoot.cartComponentList.get(1).view());
+	}
+	
+	@Test
+	public void isCompositeTest() {
+		
+		assertEquals(true, shoppingCartRoot.cartComponentList.get(1).isComposite());
+		assertEquals(false, shoppingCartRoot.cartComponentList.get(0).isComposite());
+	}
+	
+	@Test
+	public void removeLeafTest() {
+		
+		shoppingCartRoot.cartComponentList.remove(0);
+		assertEquals("Group1", shoppingCartRoot.cartComponentList.get(0).view());
+		
+	}
+	
+	@Test
+	public void removeCompositeTest() {
+		
+		shoppingCartRoot.add(new ShoppingCartLeaf(cart1)); //Add a leaf to the root since we removed it on the last test
+		shoppingCartRoot.cartComponentList.remove(1);
+		assertEquals("1", shoppingCartRoot.cartComponentList.get(0).view());
+		
 	}
 
 }
