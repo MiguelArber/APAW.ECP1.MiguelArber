@@ -18,6 +18,10 @@ La ventaja de usar este patrón es clara, no sólo **resultaría muy sencillo a�
 En el siguiente diagrama se refleja el uso del patrón strategy para la aplicación previamente descrita:
 ![Class diagram for Strategy Pattern](https://github.com/MiguelArber/APAW.ECP1.MiguelArber/blob/develop/docs/Strategy.png)
 
+### Aclaraciones
+
+En el punto 1 del enunciado se especifica que la factoría sólo debe manejar los objetos, no crearlos. Sin embargo, en la solución de mi ejercicio el método el método getShoppingCart(int id) creará un carrito con el ID proporcionado en caso de no existir uno con ese mismo id (en caso contrario devolverá el carrito existente).
+
 ### Estado del código
 
 > [![Build Status](https://travis-ci.org/MiguelArber/APAW.ECP1.MiguelArber.svg?branch=master)](https://travis-ci.org/MiguelArber/APAW.ECP1.MiguelArber)
